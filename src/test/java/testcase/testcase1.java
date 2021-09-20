@@ -28,4 +28,9 @@ public class testcase1 extends BaseTest {
 		elu.waitForTitleToBePresent(10);
 		
 	}
+	
+	@Test(priority=3)
+	public void search2() {
+		elu.waitForTitleToBePresent(10);
+	}
 }
