@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6923" started-at="2021-09-20T19:14:29 IST" finished-at="2021-09-20T19:14:36 IST">
+  <suite name="Suite" duration-ms="11877" started-at="2021-09-21T15:12:06 IST" finished-at="2021-09-21T15:12:18 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6923" started-at="2021-09-20T19:14:29 IST" finished-at="2021-09-20T19:14:36 IST">
+    <test name="Test" duration-ms="11877" started-at="2021-09-21T15:12:06 IST" finished-at="2021-09-21T15:12:18 IST">
       <class name="testcase.testcase1">
-        <test-method status="PASS" signature="launchsite(java.lang.String,java.lang.String)[pri:0, instance:testcase.testcase1@79e2c065]" name="launchsite" is-config="true" duration-ms="3267" started-at="2021-09-20T19:14:29 IST" finished-at="2021-09-20T19:14:32 IST">
+        <test-method status="PASS" signature="launchsite(java.lang.String,java.lang.String)[pri:0, instance:testcase.testcase1@245b4bdc]" name="launchsite" is-config="true" duration-ms="7625" started-at="2021-09-21T15:12:06 IST" finished-at="2021-09-21T15:12:14 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -23,15 +23,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchsite -->
-        <test-method status="PASS" signature="search_fields()[pri:1, instance:testcase.testcase1@79e2c065]" name="search_fields" duration-ms="379" started-at="2021-09-20T19:14:32 IST" finished-at="2021-09-20T19:14:33 IST">
+        <test-method status="PASS" signature="search_fields()[pri:1, instance:testcase.testcase1@245b4bdc]" name="search_fields" duration-ms="448" started-at="2021-09-21T15:12:14 IST" finished-at="2021-09-21T15:12:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search_fields -->
-        <test-method status="PASS" signature="search()[pri:2, instance:testcase.testcase1@79e2c065]" name="search" duration-ms="2109" started-at="2021-09-20T19:14:33 IST" finished-at="2021-09-20T19:14:35 IST">
+        <test-method status="PASS" signature="search()[pri:2, instance:testcase.testcase1@245b4bdc]" name="search" duration-ms="2271" started-at="2021-09-21T15:12:14 IST" finished-at="2021-09-21T15:12:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.testcase1@79e2c065]" name="tearDown" is-config="true" duration-ms="646" started-at="2021-09-20T19:14:35 IST" finished-at="2021-09-20T19:14:36 IST">
+        <test-method status="PASS" signature="search2()[pri:3, instance:testcase.testcase1@245b4bdc]" name="search2" duration-ms="15" started-at="2021-09-21T15:12:17 IST" finished-at="2021-09-21T15:12:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.testcase1@245b4bdc]" name="tearDown" is-config="true" duration-ms="667" started-at="2021-09-21T15:12:17 IST" finished-at="2021-09-21T15:12:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

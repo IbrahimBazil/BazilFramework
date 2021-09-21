@@ -5,12 +5,14 @@
     <listener class-name="listeners.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="firefox"/>
     <parameter name="version" value="80"/>
     <classes>
       <class name="testcase.testcase1">
         <methods>
           <include name="tearDown"/>
+          <include name="search2"/>
+          <include name="search_fields"/>
           <include name="launchsite"/>
           <include name="search"/>
         </methods>

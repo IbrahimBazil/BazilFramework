@@ -16,9 +16,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utilities.OptionManager;
 
 public class BasePage {
 
@@ -29,21 +34,23 @@ public class BasePage {
 	public static String highlight;
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 	public FileInputStream fis;
+	public ChromeOptions co;
+	public FirefoxOptions fo;
 	protected static final Logger log = Logger.getLogger(BasePage.class);
-	//private static String OUTPUT_FOLDER ="./reports/Screenshots/";
+	// private static String OUTPUT_FOLDER ="./reports/Screenshots/";
 	protected static String FILE_NAME;
-	//public String valuesss;
+	// public String valuesss;
 
 	public WebDriver initializeDriver(String browser, String browserVersion) {
 		highlight = prop.getProperty("highlight");
-
+		OptionManager optionManager = new OptionManager(prop);
+		
+		
 		if (browser.equalsIgnoreCase("chrome")) {
 			try {
-				
-				//System.setProperty("webdriver.chrome.driver", "C:\\Users\\M1058748\\eclipse-workspace\\BazilFramework\\browsers\\chromedriver.exe");
-				//driver= new ChromeDriver();
+				co = optionManager.getChromeOptions();
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(co);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -52,10 +59,38 @@ public class BasePage {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			try {
+				fo = optionManager.getFirefoxOptions();
 				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				driver = new FirefoxDriver(fo);
 			} catch (Exception e) {
 				e.printStackTrace();
+			}
+		}
+
+		if (browser.equalsIgnoreCase("iexplore")) {
+			try {
+				WebDriverManager.iedriver().setup();
+				driver = new InternetExplorerDriver();
+			} catch (Exception e) {
+				log.debug(e.getMessage());
+			}
+		}
+		
+		if (browser.equalsIgnoreCase("edge")) {
+			try {
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+			} catch (Exception e) {
+				log.debug(e.getMessage());
+			}
+		}
+		
+		if (browser.equalsIgnoreCase("headless")) {
+			try {
+				System.setProperty("capture.video", "false");
+				WebDriverManager.phantomjs().setup();
+			} catch (Exception e) {
+				log.debug(e.getMessage());
 			}
 		}
 
@@ -91,22 +126,20 @@ public class BasePage {
 		return prop;
 
 	}
-/*
-	public String getScreenshot(String TestCaseName, WebDriver driver) throws IOException {
-		//driver=this.driver;
-		String date = new SimpleDateFormat("ddMMyyyhhmmss").format(new Date());
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		
-		FILE_NAME = "Screenshot_" + TestCaseName + "_" + date + ".png";
-		String destinationFile = OUTPUT_FOLDER + FILE_NAME;
-		//valuesss=destinationFile;
-		//String path2 = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-		File destination = new File(destinationFile);
-		FileUtils.copyFile(src, destination);
-		return destinationFile;
-
-	}
-	*/
+	/*
+	 * public String getScreenshot(String TestCaseName, WebDriver driver) throws
+	 * IOException { //driver=this.driver; String date = new
+	 * SimpleDateFormat("ddMMyyyhhmmss").format(new Date()); TakesScreenshot ts =
+	 * (TakesScreenshot) driver; File src = ts.getScreenshotAs(OutputType.FILE);
+	 * 
+	 * FILE_NAME = "Screenshot_" + TestCaseName + "_" + date + ".png"; String
+	 * destinationFile = OUTPUT_FOLDER + FILE_NAME; //valuesss=destinationFile;
+	 * //String path2 = System.getProperty("user.dir") + "/screenshots/" +
+	 * System.currentTimeMillis() + ".png"; File destination = new
+	 * File(destinationFile); FileUtils.copyFile(src, destination); return
+	 * destinationFile;
+	 * 
+	 * }
+	 */
 
 }
