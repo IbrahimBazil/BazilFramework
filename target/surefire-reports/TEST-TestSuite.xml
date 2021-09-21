@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="21.86" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="8.414" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,29 +18,29 @@
     <property name="os.name" value="Windows 10"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\M1058748\AppData\Local\Temp\surefire1373493857645727823\surefirebooter4052916634985808698.jar C:\Users\M1058748\AppData\Local\Temp\surefire1373493857645727823 2021-09-21T11-57-48_312-jvmRun1 surefire1285521720857400041tmp surefire_05848261327826534631tmp"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_181\bin"/>
+    <property name="sun.java.command" value="C:\Users\M1058748\AppData\Local\Temp\surefire4549206604082366248\surefirebooter6641218440496551094.jar C:\Users\M1058748\AppData\Local\Temp\surefire4549206604082366248 2021-09-21T20-15-38_452-jvmRun1 surefire6738023218875110335tmp surefire_03846112471710394690tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\M1058748\eclipse-workspace\BazilFramework\target\test-classes;C:\Users\M1058748\eclipse-workspace\BazilFramework\target\classes;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\M1058748\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\M1058748\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\M1058748\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\M1058748\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\M1058748\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\M1058748\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\M1058748\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\M1058748\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\M1058748\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\M1058748\.m2\repository\io\github\bonigarcia\webdrivermanager\4.2.2\webdrivermanager-4.2.2.jar;C:\Users\M1058748\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\M1058748\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\M1058748\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\M1058748\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\M1058748\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.1\httpclient5-5.0.1.jar;C:\Users\M1058748\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.1\httpcore5-5.0.1.jar;C:\Users\M1058748\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.1\httpcore5-h2-5.0.1.jar;C:\Users\M1058748\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\M1058748\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\M1058748\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\M1058748\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\M1058748\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\M1058748\.m2\repository\com\aventstack\extentreports\5.0.8\extentreports-5.0.8.jar;C:\Users\M1058748\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\M1058748\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\M1058748\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\M1058748\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;C:\Users\M1058748\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\M1058748\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\M1058748\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\M1058748"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_181"/>
     <property name="basedir" value="C:\Users\M1058748\eclipse-workspace\BazilFramework"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\M1058748\AppData\Local\Temp\surefire1373493857645727823\surefirebooter4052916634985808698.jar"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\M1058748\AppData\Local\Temp\surefire4549206604082366248\surefirebooter6641218440496551094.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_181\lib\resources.jar;C:\Program Files\Java\jre1.8.0_181\lib\rt.jar;C:\Program Files\Java\jre1.8.0_181\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_181\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_181\lib\jce.jar;C:\Program Files\Java\jre1.8.0_181\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_181\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_181\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
     <property name="user.name" value="M1058748"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_181\lib\endorsed"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
@@ -53,47 +53,47 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Users\M1058748\LearningFiles\apache-maven-3.8.2/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files\Java\jdk1.8.0_181/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft VS Code\bin;C:\Users\M1058748\OriginalCode\oracle\instantclient;C:\Program Files\TortoiseGit\bin;C:\Users\M1058748\LearningFiles\apache-maven-3.8.2\bin;C:\Users\M1058748\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\M1058748\AppData\Roaming\npm;C:\Users\M1058748\OriginalCode\oracle\instantclient;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_181\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft VS Code\bin;C:\Users\M1058748\OriginalCode\oracle\instantclient;C:\Program Files\TortoiseGit\bin;C:\Users\M1058748\LearningFiles\apache-maven-3.8.2\bin;C:\Users\M1058748\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\M1058748\AppData\Roaming\npm;C:\Users\M1058748\OriginalCode\oracle\instantclient;;C:\Users\M1058748\Desktop;;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="25.181-b13"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_181\lib\ext;C:\windows\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="search_fields" classname="testcase.testcase1" time="1.807">
+  <testcase name="search_fields" classname="testcase.testcase1" time="0.425">
     <system-out><![CDATA[Before Test Started
-09-21-2021 11:57:55 BaseTest.java INFO  [main] base.BasePage 42 - chrome
-09-21-2021 11:57:55 BaseTest.java INFO  [main] base.BasePage 43 - 80
+09-21-2021 20:15:40 BaseTest.java INFO  [main] base.BasePage 42 - chrome
+09-21-2021 20:15:40 BaseTest.java INFO  [main] base.BasePage 43 - 80
 chrome
-09-21-2021 11:58:05 Listeners.java INFO  [main] base.BasePage 48 - search_fields_Testing has been started
-09-21-2021 11:58:06 JavaScriptExe.java INFO  [main] base.BasePage 22 - Flashing Over the Element:
-09-21-2021 11:58:06 ElementUtils.java INFO  [main] base.BasePage 51 - Cleared the Text Field for : 
-09-21-2021 11:58:06 ElementUtils.java INFO  [main] base.BasePage 54 - Entering the Value: IPhone13
-09-21-2021 11:58:07 Listeners.java INFO  [main] base.BasePage 72 - search_fields_Testing has been completed
+09-21-2021 20:15:44 Listeners.java INFO  [main] base.BasePage 48 - search_fields_Testing has been started
+09-21-2021 20:15:44 JavaScriptExe.java INFO  [main] base.BasePage 22 - Flashing Over the Element:
+09-21-2021 20:15:44 ElementUtils.java INFO  [main] base.BasePage 51 - Cleared the Text Field for : 
+09-21-2021 20:15:44 ElementUtils.java INFO  [main] base.BasePage 54 - Entering the Value: IPhone13
+09-21-2021 20:15:44 Listeners.java INFO  [main] base.BasePage 72 - search_fields_Testing has been completed
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}) on port 30913
+Starting ChromeDriver 93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}) on port 6123
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Sep 21, 2021 11:58:04 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Sep 21, 2021 8:15:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="search" classname="testcase.testcase1" time="3.173">
-    <system-out><![CDATA[09-21-2021 11:58:07 Listeners.java INFO  [main] base.BasePage 48 - search_Testing has been started
-09-21-2021 11:58:10 ElementUtils.java INFO  [main] base.BasePage 59 - Entered the Value
-09-21-2021 11:58:10 ElementUtils.java INFO  [main] base.BasePage 32 - Title of the Page is Displayed as: IPhone13 - Google Search
-09-21-2021 11:58:10 Listeners.java INFO  [main] base.BasePage 72 - search_Testing has been completed
+  <testcase name="search" classname="testcase.testcase1" time="2.196">
+    <system-out><![CDATA[09-21-2021 20:15:44 Listeners.java INFO  [main] base.BasePage 48 - search_Testing has been started
+09-21-2021 20:15:46 ElementUtils.java INFO  [main] base.BasePage 59 - Entered the Value
+09-21-2021 20:15:46 ElementUtils.java INFO  [main] base.BasePage 32 - Title of the Page is Displayed as: IPhone13 - Google Search
+09-21-2021 20:15:46 Listeners.java INFO  [main] base.BasePage 72 - search_Testing has been completed
 ]]></system-out>
   </testcase>
-  <testcase name="search2" classname="testcase.testcase1" time="0.593">
-    <system-out><![CDATA[09-21-2021 11:58:10 Listeners.java INFO  [main] base.BasePage 48 - search2_Testing has been started
-09-21-2021 11:58:10 ElementUtils.java INFO  [main] base.BasePage 32 - Title of the Page is Displayed as: IPhone13 - Google Search
-09-21-2021 11:58:11 Listeners.java INFO  [main] base.BasePage 72 - search2_Testing has been completed
+  <testcase name="search2" classname="testcase.testcase1" time="0.08">
+    <system-out><![CDATA[09-21-2021 20:15:46 Listeners.java INFO  [main] base.BasePage 48 - search2_Testing has been started
+09-21-2021 20:15:46 ElementUtils.java INFO  [main] base.BasePage 32 - Title of the Page is Displayed as: IPhone13 - Google Search
+09-21-2021 20:15:46 Listeners.java INFO  [main] base.BasePage 72 - search2_Testing has been completed
 ]]></system-out>
   </testcase>
 </testsuite>

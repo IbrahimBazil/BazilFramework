@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16846" started-at="2021-09-21T11:57:55 IST" finished-at="2021-09-21T11:58:12 IST">
+  <suite name="Suite" duration-ms="7220" started-at="2021-09-21T20:15:40 IST" finished-at="2021-09-21T20:15:47 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16846" started-at="2021-09-21T11:57:55 IST" finished-at="2021-09-21T11:58:12 IST">
+    <test name="Test" duration-ms="7220" started-at="2021-09-21T20:15:40 IST" finished-at="2021-09-21T20:15:47 IST">
       <class name="testcase.testcase1">
-        <test-method status="PASS" signature="launchsite(java.lang.String,java.lang.String)[pri:0, instance:testcase.testcase1@72f926e6]" name="launchsite" is-config="true" duration-ms="10395" started-at="2021-09-21T11:57:55 IST" finished-at="2021-09-21T11:58:05 IST">
+        <test-method status="PASS" signature="launchsite(java.lang.String,java.lang.String)[pri:0, instance:testcase.testcase1@72f926e6]" name="launchsite" is-config="true" duration-ms="3911" started-at="2021-09-21T20:15:40 IST" finished-at="2021-09-21T20:15:44 IST">
           <params>
             <param index="0">
               <value>
@@ -23,19 +23,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchsite -->
-        <test-method status="PASS" signature="search_fields()[pri:1, instance:testcase.testcase1@72f926e6]" name="search_fields" duration-ms="747" started-at="2021-09-21T11:58:05 IST" finished-at="2021-09-21T11:58:06 IST">
+        <test-method status="PASS" signature="search_fields()[pri:1, instance:testcase.testcase1@72f926e6]" name="search_fields" duration-ms="341" started-at="2021-09-21T20:15:44 IST" finished-at="2021-09-21T20:15:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search_fields -->
-        <test-method status="PASS" signature="search()[pri:2, instance:testcase.testcase1@72f926e6]" name="search" duration-ms="2728" started-at="2021-09-21T11:58:07 IST" finished-at="2021-09-21T11:58:10 IST">
+        <test-method status="PASS" signature="search()[pri:2, instance:testcase.testcase1@72f926e6]" name="search" duration-ms="2119" started-at="2021-09-21T20:15:44 IST" finished-at="2021-09-21T20:15:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="search2()[pri:3, instance:testcase.testcase1@72f926e6]" name="search2" duration-ms="21" started-at="2021-09-21T11:58:10 IST" finished-at="2021-09-21T11:58:10 IST">
+        <test-method status="PASS" signature="search2()[pri:3, instance:testcase.testcase1@72f926e6]" name="search2" duration-ms="9" started-at="2021-09-21T20:15:46 IST" finished-at="2021-09-21T20:15:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.testcase1@72f926e6]" name="tearDown" is-config="true" duration-ms="755" started-at="2021-09-21T11:58:11 IST" finished-at="2021-09-21T11:58:12 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcase.testcase1@72f926e6]" name="tearDown" is-config="true" duration-ms="570" started-at="2021-09-21T20:15:46 IST" finished-at="2021-09-21T20:15:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

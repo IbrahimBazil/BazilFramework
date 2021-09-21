@@ -31,8 +31,8 @@ public class OptionManager {
 		fo = new FirefoxOptions();
 		if (prop.getProperty("headless").trim().equals("true"))
 			fo.addArguments("--headless");
-		if (prop.getProperty("incongnito").trim().equals("true"))
-			fo.addArguments("--incongnito");
+		if (prop.getProperty("incognito").trim().equals("true"))
+			fo.addArguments("--incognito");
 		if (prop.getProperty("cookies").trim().equalsIgnoreCase("true"))
 			fo.addArguments("enable-cookies");
 		return fo;
