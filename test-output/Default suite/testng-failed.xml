@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.testcase1">
+      <class name="recaptcha.ListView">
         <methods>
-          <include name="tearDown"/>
+          <include name="saveSearchListView"/>
           <include name="launchsite"/>
-          <include name="search"/>
         </methods>
-      </class> <!-- testcase.testcase1 -->
+      </class> <!-- recaptcha.ListView -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

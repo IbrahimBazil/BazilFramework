@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
@@ -17,21 +21,25 @@ import org.testng.annotations.Parameters;
 
 import base.BasePage;
 import listeners.Listeners;
+import pageobjects.ListView_PageObjects;
+import pageobjects.RegistrationForm_pageObjects;
 import pageobjects.homePageObjects;
 import utilities.ElementUtils;
 import utilities.JavaScriptExe;
 
-public class BaseTest extends BasePage {
+public class BaseTest extends BasePage{
 
 	public static WebDriver driver;
 	public Properties prop;
 	public homePageObjects hmpg;
+	public ListView_PageObjects lvp;
 	public JavaScriptExe js;
 	public ElementUtils elu;
+	public RegistrationForm_pageObjects reg;
 	public static String path1 = System.getProperty("user.dir");
 	public static String OUTPUT_FOLDER = path1 + "//reports//Screenshots//";
 	public String FILE_NAME;
-
+	
 	@Parameters({ "browser", "version" })
 	@BeforeClass(alwaysRun = true)
 	public void launchsite(@Optional String browserName, @Optional String browserVersion) {
@@ -47,22 +55,24 @@ public class BaseTest extends BasePage {
 		}
 
 		System.out.println(browser);
-		driver = initializeDriver(browser, browserVersion);
-		String url = prop.getProperty("url");
-		driver.get(url);
+		driver =initializeDriver(browser, browserVersion);
+		//String url = prop.getProperty("baseUrl");
+		//driver.get(url);
 
 		hmpg = new homePageObjects(driver);
 		elu = new ElementUtils(driver);
 		js = new JavaScriptExe(driver);
+		lvp=new ListView_PageObjects(driver);
+		reg=new RegistrationForm_pageObjects(driver);
 
 	}
-
+/*
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 
 		driver.quit();
 	}
-
+*/
 	public String getScreenshot(String TestCaseName) throws IOException {
 		// driver=this.driver;
 		String date = new SimpleDateFormat("ddMMyyyhhmmss").format(new Date());
@@ -75,5 +85,41 @@ public class BaseTest extends BasePage {
 		return destinationFile;
 
 	}
+	
+	public void launchingUrl(String ValidationUrl) {
+		String baseURL=prop.getProperty("baseUrl");
+		String listViewUrl=prop.getProperty("baseUrl")+prop.getProperty("listViewURL");
+		String DetailPageURL=prop.getProperty("baseUrl")+prop.getProperty("DetailPageURL");
+		String logoutUrl= prop.getProperty("baseUrl")+prop.getProperty("logoutURL");
+		String newSignupUrl= prop.getProperty("baseUrl")+prop.getProperty("newSignupURL");
+		
+		
+		if (ValidationUrl.equalsIgnoreCase("BaseUrl")) {
+			driver.get(baseURL);
+			log.info("Opened the Base URL"+ baseURL);
+		}
+		if (ValidationUrl.equalsIgnoreCase("listviewurl")) {
+			driver.get(listViewUrl);
+			log.info("Opened the List View"+listViewUrl);
+		}
+		if (ValidationUrl.equalsIgnoreCase("detailpage")) {
+			driver.get(DetailPageURL);
+			log.info("Open the Home Details Page"+DetailPageURL);
+		} 
+		if(ValidationUrl.equalsIgnoreCase("newsignuppage"))
+		{
+			driver.get(newSignupUrl);
+			log.info("Open the SignUp url"+newSignupUrl);
+		}
+	}
+	
+	
+	public void frames() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		WebElement frames=driver.findElement(By.cssSelector("iframe.modalfx-iframe"));
+		driver.switchTo().frame(frames);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	}
+	
 
 }

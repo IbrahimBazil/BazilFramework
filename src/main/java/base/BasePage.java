@@ -1,19 +1,14 @@
 package base;
 
-import java.io.File;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,7 +31,7 @@ public class BasePage {
 	public FileInputStream fis;
 	public ChromeOptions co;
 	public FirefoxOptions fo;
-	protected static final Logger log = Logger.getLogger(BasePage.class);
+	public static final Logger log = Logger.getLogger(BasePage.class);
 	// private static String OUTPUT_FOLDER ="./reports/Screenshots/";
 	protected static String FILE_NAME;
 	// public String valuesss;
@@ -44,8 +39,7 @@ public class BasePage {
 	public WebDriver initializeDriver(String browser, String browserVersion) {
 		highlight = prop.getProperty("highlight");
 		OptionManager optionManager = new OptionManager(prop);
-		
-		
+
 		if (browser.equalsIgnoreCase("chrome")) {
 			try {
 				co = optionManager.getChromeOptions();
@@ -75,7 +69,7 @@ public class BasePage {
 				log.debug(e.getMessage());
 			}
 		}
-		
+
 		if (browser.equalsIgnoreCase("edge")) {
 			try {
 				WebDriverManager.edgedriver().setup();
@@ -84,7 +78,7 @@ public class BasePage {
 				log.debug(e.getMessage());
 			}
 		}
-		
+
 		if (browser.equalsIgnoreCase("headless")) {
 			try {
 				System.setProperty("capture.video", "false");

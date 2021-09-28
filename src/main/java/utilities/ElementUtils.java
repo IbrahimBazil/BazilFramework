@@ -3,21 +3,24 @@ package utilities;
 
 import java.util.List;
 
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BasePage;
+import base.BaseTest;
 
-public class ElementUtils extends BasePage {
+public class ElementUtils extends BaseTest {
 	
-	private WebDriver driver;
-	private JavaScriptExe js;
+	public WebDriver driver;
+	public JavaScriptExe js;
 	protected static final Logger log=Logger.getLogger(BasePage.class);
 	
 	public ElementUtils(WebDriver driver) {
@@ -54,7 +57,12 @@ public class ElementUtils extends BasePage {
 		log.info("Entering the Value: "+Value);
 	}
 	
+	public void sendKeyAction(WebElement element) {
+		element.sendKeys(Keys.ENTER);
+	}
+	
 	public void doClick(WebElement element) {
+		//WebDriverWait wait = new WebDriverWait(driver, 10000);
 		element.click();
 		log.info("Entered the Value");
 	}
@@ -86,5 +94,13 @@ public class ElementUtils extends BasePage {
 				break;
 			}
 		}
+	}
+	
+	
+	public void switchFrame(WebElement element) {
+		//driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		//WebElement frame=driver.findElement(By.className(locatorElement));
+		driver.switchTo().frame(element);
+		log.info("Frame Switched");
 	}
 }
