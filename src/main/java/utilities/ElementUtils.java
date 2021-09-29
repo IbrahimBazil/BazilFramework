@@ -2,7 +2,7 @@ package utilities;
 
 
 import java.util.List;
-
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -100,7 +100,17 @@ public class ElementUtils extends BaseTest {
 	public void switchFrame(WebElement element) {
 		//driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		//WebElement frame=driver.findElement(By.className(locatorElement));
-		driver.switchTo().frame(element);
-		log.info("Frame Switched");
+		
+		try {
+			Thread.sleep(10000);
+			driver.switchTo().frame(element);
+			Thread.sleep(10000);
+			log.info("Frame Switched");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		
 	}
 }

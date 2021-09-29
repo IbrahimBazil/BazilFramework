@@ -10,7 +10,10 @@
     <classes>
       <class name="recaptcha.ListView">
         <methods>
+          <include name="tearDown"/>
+          <include name="HeartIconinListView"/>
           <include name="saveSearchListView"/>
+          <include name="launchsite"/>
           <include name="launchsite"/>
         </methods>
       </class> <!-- recaptcha.ListView -->

@@ -14,11 +14,13 @@ import utilities.JavaScriptExe;
 public class ListView_PageObjects {
 
 	public WebDriver driver;
-	public JavaScriptExe js = new JavaScriptExe(driver);
-	public ElementUtils elu = new ElementUtils(driver);
+	public JavaScriptExe js;
+	public ElementUtils elu;
 	public ListView_PageObjects(WebDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver, this);
+		elu= new ElementUtils(this.driver);
+		js = new JavaScriptExe(this.driver);
+		PageFactory.initElements(this.driver, this);
 		
 	}
 	
@@ -32,11 +34,13 @@ public class ListView_PageObjects {
 	public void clickSaveSearch() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		elu.doClick(saveSearch);
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	public void clickHeartIconInListView() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		js.clickElementByJS(HeartIconInListView);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	

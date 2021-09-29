@@ -27,7 +27,7 @@ public class RegistrationForm_pageObjects {
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	@FindBy(how=How.CSS, using="iframe.modalfx-iframe")
+	@FindBy(how=How.XPATH, using="//iframe[@class='modalfx-iframe']")
 	WebElement frame_ele;
 		
 	@FindBy(how=How.XPATH, using="//input[@id='first_name']")
@@ -54,25 +54,32 @@ public class RegistrationForm_pageObjects {
 	@FindBy(how=How.XPATH, using="//iframe[not(contains(@style,'width: 100%; height: 100%;'))][@title='recaptcha challenge']")
 	WebElement captcha;
 	
-	public void switchtoiframe() {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		elu.switchFrame(frame_ele);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	}
-	
 	
 	public void doRegistrationListView() {
 		//elu.switchFrameByClassName(iframe);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		String first_name="qa_"+timeAppender;
-		String last_name="qa_"+timeAppender;
-		String email="qa_"+timeAppender+"@gmail.com";
-		String password="password";
-		elu.doSendKeys(firstname_txt, first_name);
-		elu.doSendKeys(lastname_txt, last_name);
-		elu.doSendKeys(email_txt, email);
-		elu.doSendKeys(password_fld, password);
-		elu.sendKeyAction(password_fld);
+		try {
+			Thread.sleep(10000);
+			elu.switchFrame(frame_ele);
+			Thread.sleep(10000);
+			//driver.switchTo().frame(frame_ele);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			String first_name="qa_"+timeAppender;
+			String last_name="qa_"+timeAppender;
+			String email="qa_"+timeAppender+"@gmail.com";
+			String password="password";
+			elu.doSendKeys(firstname_txt, first_name);
+			elu.doSendKeys(lastname_txt, last_name);
+			elu.doSendKeys(email_txt, email);
+			elu.doSendKeys(password_fld, password);
+			elu.sendKeyAction(password_fld);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		
 	}
 	
 	

@@ -66,13 +66,13 @@ public class BaseTest extends BasePage{
 		reg=new RegistrationForm_pageObjects(driver);
 
 	}
-/*
+
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 
 		driver.quit();
 	}
-*/
+
 	public String getScreenshot(String TestCaseName) throws IOException {
 		// driver=this.driver;
 		String date = new SimpleDateFormat("ddMMyyyhhmmss").format(new Date());
@@ -86,13 +86,34 @@ public class BaseTest extends BasePage{
 
 	}
 	
-	public void launchingUrl(String ValidationUrl) {
-		String baseURL=prop.getProperty("baseUrl");
-		String listViewUrl=prop.getProperty("baseUrl")+prop.getProperty("listViewURL");
-		String DetailPageURL=prop.getProperty("baseUrl")+prop.getProperty("DetailPageURL");
-		String logoutUrl= prop.getProperty("baseUrl")+prop.getProperty("logoutURL");
-		String newSignupUrl= prop.getProperty("baseUrl")+prop.getProperty("newSignupURL");
+	public void launchingUrl(String brand, String ValidationUrl) {
+		String baseURL = null;
+		//String baseURL=prop.getProperty("baseUrl");
+		String CBbaseURL=prop.getProperty("CBbaseUrl");
+		String ERAbaseURL=prop.getProperty("ERAbaseUrl");
+		String C21baseURL=prop.getProperty("C21baseUrl");
+		String BhgrebaseURL=prop.getProperty("BHGREbaseUrl");
+		//String listViewUrl=prop.getProperty("baseUrl")+prop.getProperty("listViewURL");
+		//String DetailPageURL=prop.getProperty("baseUrl")+prop.getProperty("DetailPageURL");
+		//String logoutUrl= prop.getProperty("baseUrl")+prop.getProperty("logoutURL");
+		//String newSignupUrl= prop.getProperty("baseUrl")+prop.getProperty("newSignupURL");
+		if(brand.equalsIgnoreCase("era")) {
+			baseURL=ERAbaseURL;
+		}
+		if(brand.equalsIgnoreCase("cb")) {
+			baseURL=CBbaseURL;
+		}
+		if(brand.equalsIgnoreCase("c21")) {
+			baseURL=C21baseURL;
+		}
+		if(brand.equalsIgnoreCase("bhgre")) {
+			baseURL=BhgrebaseURL;
+		}
 		
+		String listViewUrl=baseURL+prop.getProperty("listViewURL");
+		String DetailPageURL=baseURL+prop.getProperty("DetailPageURL");
+		String newSignupUrl=baseURL+prop.getProperty("newSignupURL");
+		String logoutUrl=baseURL+prop.getProperty("logoutURL");
 		
 		if (ValidationUrl.equalsIgnoreCase("BaseUrl")) {
 			driver.get(baseURL);

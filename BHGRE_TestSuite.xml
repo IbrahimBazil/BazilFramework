@@ -6,6 +6,7 @@
 	</listeners>
 	<parameter name="browser" value="chrome" />
 	<parameter name="version" value="80" />
+	<parameter name="brand" value="bhgre"/>
 	<test thread-count="5" name="Test">
 
 		<classes>
